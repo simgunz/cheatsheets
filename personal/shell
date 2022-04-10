@@ -1,0 +1,24 @@
+# Move
+Move by one word                                                  Alt-b, Alt-f
+Move to the beginning/end of the line                             Ctrl-a, Ctrl-e
+Toggle between the start of line and current cursor position      Ctrl+xx
+
+# Edit
+Delete a word before/after the cursor                             Ctrl+w, Alt-d
+Cut the Line before/after the cursor                              Ctrl+u, Ctrl+k
+Paste                                                             Ctrl+y
+Undo                                                              Ctrl+_
+
+# History
+Use the last word of the previous command                         Alt+.
+
+Edit current command in vim                                       Ctrl+x Ctrl+e
+
+# Suspend jobs
+Suspend a job                                                     Ctrl-z
+List suspended and background jobs                                jobs
+Resume a job in foreground                                        fg %1
+Resume a job in background                                        bg %1
+
+# Kill a loop
+Ctrl-z, kill -9 PID

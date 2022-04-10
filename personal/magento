@@ -1,0 +1,8 @@
+# Force update indexes (after adding product)
+php bin/magento indexer:reindex
+
+# Flush cache
+php bin/magento cache:flush
+
+# Adding product
+Check: enabled, in stock, quantity, simple product

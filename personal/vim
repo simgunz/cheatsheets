@@ -1,0 +1,41 @@
+# Learning
+Paste from clipboard                             <leader>p
+Yank all file to clipboard                       <leader>Y
+Open recent file                                 <leader>h
+Word motion                                      <leader>w,b,...
+Easy motion leader                               <localleader><localleader>
+Python sense                                     ac ic af if ad id
+Targets                                          https://github.com/wellle/targets.vim
+Targets                                          a, a: 2a)
+
+# Shortcuts
+Jump between last and current position           ``
+Jump to next/previous jump position              Ctrl+O / Ctrl+I
+Jump to previous/next edit position              g; / g,
+
+Paste and put the cursore after                  gp
+
+Format code                                      ==
+
+# Motions
+Next method                                      ]m
+Next unmatched )                                 ])
+Next unmatched }                                 ]}
+
+# Registers
+Yank register          0
+Delete registers       1-9
+
+# edit as sudo
+sudoedit
+
+# save as sudo
+:w !sudo tee %
+
+# git-conflicted
+File view                        upstream  working_dir  local
+File view layman                 master    working_dir  feature
+
+Diff get upstream                     dgu                
+Diff get local                        dgl                
+Next conflict                         <leader>nc         

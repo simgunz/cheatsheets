@@ -1,0 +1,22 @@
+# Install a package
+pipenv install PACKAGE
+
+# Instal a dev package
+pipenv install --dev PACKAGE
+
+# Install packages from lock file
+pipenv sync --dev
+
+# Install a package without updating the other installed packages
+pipenv install --keep-outdated PACKAGE 
+
+# Remove packages not in lock file
+pipenv clean
+
+# Update the packages in complicated situations
+pipenv --rm       # Removes the existing virtualenv
+pipenv lock       # Resolves the dependencies and generates the Pipfile.lock 
+pienv sync --dev  # Installs the packages from the Pipfile.lock
+
+# Git
+Commit Pipenv and Pipenv.lock separately, because it is impossible to revert/rebase a Pipenv.lock

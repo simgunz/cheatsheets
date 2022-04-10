@@ -1,0 +1,12 @@
+# Login
+gcloud auth login
+
+# Logout
+gcloud auth revoke
+
+# List roles for a particular service
+gcloud iam roles list --filter='name: roles/bigquery*'
+
+# Aggiungo role a service account
+gcloud projects add-iam-policy-binding ga360bigquerytpcookietecnici --member "serviceAccount:reporting@ga360bigquerytpcookietecnici.iam.gserviceaccount.com" --role "roles/bigquery.jobUser"
+

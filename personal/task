@@ -1,0 +1,5 @@
+# Init a local project (custom)
+task-init-local-project PROJECTNAME
+
+# Switch to a context
+task use context

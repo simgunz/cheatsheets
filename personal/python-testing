@@ -1,0 +1,41 @@
+# pytest
+Add __init__.py to the tests/ directory to be able importing modules from the parent folder
+
+# Mock
+- Better using MagicMock than patch, if you resort on patch it means your code is not testable
+- Mock the object is imported into not where the object is imported from
+- Usa create_autospec o l'opzione autospec=True invece di Mock e MagicMock per rispettare l'interfaccia del metodo
+- Usa il decoratore invece di passare istanze mockate
+- Mocking decorators requires special attention
+
+# Mock common pitfalls
+https://alexmarandon.com/articles/python_mock_gotchas/
+
+https://breadcrumbscollector.tech/how-to-mock-in-python-almost-definitive-guide/
+
+patch - patches a class
+patch.object - patches an instance
+
+# Test that we do not print anything to stdout
+import sys
+import unittest
+from io import StringIO
+from unittest import mock
+
+class TestExample(unittest.TestCase):
+
+    @mock.patch('sys.stdout', new=StringIO())
+    def test_example(self):
+
+        example()
+
+        self.assertEqual("", sys.stdout.read())
+
+# Temp files
+Use the tmp_path fixture if using pytest
+
+# Replace print_with_external with print in every test
+@pytest.fixture(autouse=True)
+def print_with_external_mock():
+    with mock.patch("jrnlmd.ioutils.print_with_external", wraps=print) as print_mock:
+        yield print_mock

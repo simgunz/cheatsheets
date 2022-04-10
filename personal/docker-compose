@@ -1,0 +1,18 @@
+# Reference documentation
+https://docs.docker.com/compose/compose-file/compose-file-v3/
+https://github.com/compose-spec/compose-spec/blob/master/spec.md#compose-file
+
+# File name
+compose.yaml
+
+# Compose version
+Do not specify the version in the compose file
+
+# Override default entrypoint
+entrypoint: /code/entrypoint.sh
+
+# Override default command
+command: bundle exec thin -p 3000
+
+# Run cron in foreground to avoid the tail trick
+cron -f

@@ -1,0 +1,9 @@
+# Useful commands
+Show call hierarchy                              Alt + Shift + h
+
+# Troubleshooting
+Start extension bisect
+
+# Vim
+Hoover mouse                                     gh
+Add cursor to matching work                      2gb

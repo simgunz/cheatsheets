@@ -1,0 +1,35 @@
+# Basic example of server with python
+# Will start a Web Server in the current directory on port 8000
+# go to http://127.0.0.1:8000
+
+# Python v2.7
+python -m SimpleHTTPServer
+# Python 3
+python -m http.server 8000
+
+# SMTP-Server for debugging, messages will be discarded, and printed on stdout.
+python -m smtpd -n -c DebuggingServer localhost:1025
+
+# Pretty print a json
+python -m json.tool foo.json
+
+# Modules
+
+# Print objects in a format that can be fed to the interpreter
+pprint 
+
+# Parse strings expressing dates
+dateparser.parse
+
+# Debug with print
+Use icecream library
+
+# Logging
+- Use 'logging' standard library
+- https://gist.github.com/olooney/8155400
+
+# Send emails
+https://coderzcolumn.com/tutorials/python/email-how-to-represent-an-email-message-in-python
+
+# Use shell-like commands in python
+plumbum

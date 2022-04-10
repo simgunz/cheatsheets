@@ -1,0 +1,14 @@
+# Stash viewer
+gss
+
+Apply stash               Ctrl+A
+Drop stash                Ctrl+D
+
+# Fixup commit (rebase)
+gfu
+
+# Checkout branch
+gcb
+
+# Interactive rebase
+grb

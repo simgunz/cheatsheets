@@ -1,0 +1,8 @@
+# Show name only
+rg -l NEEDLE
+
+# Hide line numbers and file names when piping
+rg -NI NEEDLE | ...
+
+# Preserve the header line (duplicate NEEDLE lines gets merged)
+rg 'column_name|NEEDLE' | uniq -u > output.csv

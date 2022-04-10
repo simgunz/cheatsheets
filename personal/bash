@@ -1,0 +1,58 @@
+# Style
+https://google.github.io/styleguide/shellguide.html
+2 spaces for indent
+
+# Redirect stdout and stderr to file
+script &> app.log
+
+# Heredoc (quote the first sentinel to prevent bash substitutions)
+grep proud <<END
+I am a proud sentence
+END
+
+# Herestring
+grep proud <<<"I am a proud sentence"
+
+# Process substitution. Returns a temporary file name.
+diff <(sort file1) <(sort file2)
+
+# Conditional
+if [[ -e /dev/md0 ]]; then
+  echo "if"
+elif [[ -e /dev/md1 ]]; then
+  echo "elseif"
+else
+  echo "elseif"
+fi
+
+# To implement a for loop:
+for file in *; do
+
+# To implement a for loop with zero padded numbers:
+for i in $(seq -f "%02g" 1 31); do
+
+# To implement a case command:
+case "$1"
+in
+    1) echo "one found";;
+    3*) echo "something beginning with 3 found";;
+esac
+
+# To turn on debugging:
+set -x
+
+# To turn off debugging:
+set +x
+
+# Set early fail, not recommended http://mywiki.wooledge.org/BashFAQ/105
+set -e
+
+# Check if a folder is a mountpoint
+if mountpoint -q -- "${WIN}"; then
+  echo "Unmounting ${WIN}..."
+  umount ${WIN}
+fi
+
+# Get the script directory
+SCRIPT_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+

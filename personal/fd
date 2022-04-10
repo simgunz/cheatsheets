@@ -1,0 +1,5 @@
+# Execute a command on each result
+fd <query> -x <cmd>
+
+# Execute a command on the list of results
+fd <query> -X <cmd>

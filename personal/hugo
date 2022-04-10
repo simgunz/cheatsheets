@@ -1,0 +1,2 @@
+# Range pages by file path with index
+{{ range $index, $element := sort (where .Site.RegularPages "Section" "faq") "File.Path" }}

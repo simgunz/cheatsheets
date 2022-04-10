@@ -1,0 +1,2 @@
+# List all pulseaudio sinks
+pactl list sinks

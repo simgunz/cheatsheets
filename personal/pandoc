@@ -1,0 +1,2 @@
+# Convert markdown to pdf with smaller margins
+pandoc -V geometry:margin=0.5in ./trusted_mail_fake.md -o ./trusted_mail_fake.pdf

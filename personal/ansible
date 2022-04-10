@@ -1,0 +1,90 @@
+# Override a variable
+ansible-playbook -e myvar=value provision.yaml
+
+# Install a role to the current playbook from ansible galaxy
+ansible-galaxy install ROLE
+
+# Create a directory
+- name: create folder for vim extra files
+  file:
+    path: ~/.vim/
+    state: directory
+  tags: vim
+
+# Link a file
+- name: symlink systemd mount unit for scambio
+  file:
+    src: "{{ role_path }}/files/media-scambio.mount"
+    path: ~/.config/systemd/user/
+    state: link
+  tags: systemd
+
+# Add a line to a file
+- name: add a line to a file
+  lineinfile:
+    path: /etc/sudoers.d/11-install-aur_builder
+    line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+    create: yes
+    validate: 'visudo -cf %s'
+  become: yes
+  tags: aur_builder
+
+# Add a block of lines to a file
+- name: add block to a file
+  blockinfile:
+    dest: /usr/share/pipewire/media-session.d/alsa-monitor.conf
+    marker: '# {mark} Fix https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/838'
+    insertbefore: '\]$'
+    block: |
+      {
+          matches = [
+              "first",
+              "second"
+          ]
+      }
+  become: yes
+  tags: bugs
+
+# Edit json
+See openrgb role
+
+# Import based on hostname
+- import_tasks: host_blackfly.yml
+  when: ansible_hostname == 'blackfly'
+
+# Add user to a group
+- name: "add user to docker group"
+  user:
+    name: "{{ ansible_env.USER }}"
+    groups:
+      - docker
+    append: yes  # Important!! You may loose sudo access without this
+  become: yes
+  tags: docker
+
+# Add cron entry
+# variable at the beginning of job value
+# note how the % is escape with \ in cron, and \ is itself escaped with \ in ansible
+- name: cron entry for ...
+  cron:
+    name: Do something ...
+    hour: 10
+    minute: 30
+    job: "{{ script_name }}.py --today=$(date -d 'yesterday' '+\\%Y-\\%m-\\%d')"
+    disabled: "{{ cron_disabled }}"
+
+
+# Add cron entry
+# no variable or variable not at the beginning, but $ sign
+# note how the % is escape with \ in cron, no need to escape \ in this case
+- name: cron entry for ...
+  cron:
+    name: Do something ...
+    hour: 10
+    minute: 30
+    job: python_script.py "--today=$(date -d 'yesterday' '+\%Y-\%m-\%d')"
+    disabled: "{{ cron_disabled }}"
+
+# Conditionals: string in asible fact
+- name: Source dataeng shell functions
+  when: "'zsh' in ansible_env.SHELL"

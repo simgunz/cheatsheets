@@ -1,0 +1,27 @@
+# States
+S - sleep
+R - running, runnable
+T - traced, suspended
+D - uninterruptable sleep
+Z - zombie
+
+# To list every process on the system:
+ps aux
+
+# BSD Options
+Also processes by other users             a
+Also processes withouth a tty (daemon)    x
+User oriented format                      u
+
+# To list a process tree:
+ps axjf
+
+# To list every process owned by foouser:
+ps -aufoouser
+
+# To list every process with a user-defined format:
+ps -eo pid,user,command
+
+# Exclude grep from your grepped output of ps.
+# Add [] to the first letter. Ex: sshd -> [s]shd
+ps aux | grep '[h]ttpd'

@@ -1,0 +1,21 @@
+# Cheatsheet
+https://gist.github.com/bradtraversy/f407d642bdc3b31681bc7e56d95485b6
+
+# Connect to local database
+mongo 'mongodb://USER:PASSWORD@127.0.0.1:27017'
+
+# Show all databases
+show dbs
+
+# Show current database
+db
+
+# Switch database
+use mydb
+
+# Show collections
+show collections
+
+# Get all rows
+db.mycollection.find().pretty()
+

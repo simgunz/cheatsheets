@@ -1,0 +1,11 @@
+# Add a user to the named group:
+gpasswd -a user group
+
+# Remove a user from the named group:
+gpasswd -d user group
+
+# Get system info
+inxi --admin --verbosity=7 --filter --no-host --width
+
+# Change shell
+chsh -s /bin/bash USER

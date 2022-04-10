@@ -1,0 +1,17 @@
+Escape % in crontab (% is interpreted as newline by cron)
+
+# Run with cron environment
+* * * * * env > /home/myuser/cron_env
+env -i bash
+./run_with_env cron_env mycommand arg1 arg2
+
+## run_with_env
+ENV_FILE="$1"
+CMD=${@:2}
+
+set -o allexport
+source $ENV_FILE
+set +o allexport
+
+$CMD
+

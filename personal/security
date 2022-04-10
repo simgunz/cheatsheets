@@ -1,0 +1,2 @@
+# Scan security issues on a host
+nikto -host http://hostname.com

@@ -1,0 +1,2 @@
+# Remove an entry from the history
+vim ~/.zhistory

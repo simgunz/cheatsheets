@@ -1,0 +1,2 @@
+# Print partion table
+sudo parted /dev/nvme0n1 print

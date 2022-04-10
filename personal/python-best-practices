@@ -1,0 +1,18 @@
+# Paths
+- Use pathlib
+- Prefer PurePath when you do not need to perform I/O operations
+
+# Temp files and folders
+- tempfile.TemporaryFile
+- tempfile.TemporaryDirectory
+- Can be used as context manager
+
+# Docstrings
+- Use triple double quotes
+
+# Method ordering
+- __init__ first
+- public before private
+- properties before methods
+- classmethod > staticmethod > method
+- top down: high level methods first

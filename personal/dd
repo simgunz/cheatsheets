@@ -1,0 +1,4 @@
+# Read from {/dev/urandom} 2*512 Bytes and put it into {/tmp/test.txt}
+# Note: At the first iteration, we read 512 Bytes.
+# Note: At the second iteration, we read 512 Bytes.
+sudo dd if=/path/to/img of=/dev/diskname bs=512 status=progress && sync

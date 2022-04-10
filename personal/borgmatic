@@ -1,0 +1,13 @@
+# Extract some files
+mktmp
+borgmatic extract \
+    --archive dragonfly-2022-01-22T10:01:30.825414 \
+    --path media/dataHD/... \
+    --destination .
+
+# Mount an archive
+mktmp && mkdir mnt
+borgmatic mount \
+    --archive dragonfly-2022-01-22T10:01:30.825414 \
+    --mount-point mnt
+

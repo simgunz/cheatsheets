@@ -1,0 +1,16 @@
+# Keep the container running after run
+Solution 1:
+CMD: ["tail", "-f", "/dev/null"]
+
+Solution 2:
+ENTRYPOINT ["entrypoint.sh"]
+
+entrypoint.sh:
+```bash
+...
+exec "$@"
+```
+
+# CMD and ENTRYPOINT
+ENTRYPOINT and CMS are combined. CMD provides defaults that can be overriden by the
+parameters passed to the `docker run` command.

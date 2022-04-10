@@ -1,0 +1,13 @@
+# KDE App main settings
+# Do not show this message againg
+# Toolbars positions
+~/.config/{ app }rc
+
+# KDE App part settings
+~/.config/{ app }partrc
+
+# Toolbar buttons specific configuration
+~/.local/share/kxmlgui5/{ app }/part.rc
+
+# Remote view places
+~/.local/share/remoteview/
