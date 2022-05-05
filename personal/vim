@@ -39,3 +39,6 @@ File view layman                 master    working_dir  feature
 Diff get upstream                     dgu                
 Diff get local                        dgl                
 Next conflict                         <leader>nc         
+
+# Headless editore
+ex

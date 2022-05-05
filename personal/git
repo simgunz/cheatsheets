@@ -25,11 +25,14 @@ git test --verify 'pipenv run pytest'
 # Change remote uri
 git remote set-url origin new.git.url/here
 
-# Clone a repo with submodules
-git clone --recurse-submodules REPO
+# Set different key for push
+git config core.sshCommand 'ssh -i ~/.ssh/id_ed25519.pub'
 
 # Clone using a deploy-key
 git clone git@gitlab.p7intranet.it:data-eng/wiki.git --config core.sshCommand='ssh -i /home/user/deploy-key'
+
+# Clone a repo with submodules
+git clone --recurse-submodules REPO
 
 # Initialize an already cloned repo with submodules
 git submodule update --init --recursive REPO

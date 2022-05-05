@@ -1,0 +1,5 @@
+# Basic syntax
+dig [@SERVER] [TYPE] DOMAIN
+
+# Find how a domain is resolved (skip all the caches)
+dig +trace DOMAIN
