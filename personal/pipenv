@@ -20,3 +20,9 @@ pienv sync --dev  # Installs the packages from the Pipfile.lock
 
 # Git
 Commit Pipenv and Pipenv.lock separately, because it is impossible to revert/rebase a Pipenv.lock
+
+# Check for security vulnerabilities
+pipenv check
+
+# Check where venv is
+pipenv --venv

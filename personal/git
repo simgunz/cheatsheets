@@ -2,6 +2,14 @@
 tags: [ vcs, git ]
 ---
 
+# Status line
+up  number of unpushed commits
+*   number of stashes
+?   untracked files
++   number of staged changes
+!   number of unstaged changes
+~   number of merge conflicts
+
 # Reset keeping index and working tree changes
 git reset --keep
 #
@@ -10,6 +18,9 @@ git reset --merge
 
 # Solve git conflicts
 git conflicted
+
+# Force other branch to match HEAD
+git branch -f OTHER_BRANCH
 
 # Ignore modification to tracked files
 git ignore

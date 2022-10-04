@@ -1,3 +1,7 @@
+---
+tags: [ data ]
+---
+
 # To search a file for a pattern:
 grep <pattern> <file>
 

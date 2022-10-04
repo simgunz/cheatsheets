@@ -2,8 +2,14 @@
 https://google.github.io/styleguide/shellguide.html
 2 spaces for indent
 
+# Check for correctness
+shellcheck SCRIPT
+
 # Redirect stdout and stderr to file
 script &> app.log
+
+# Recursively list files
+find . -type f -print
 
 # Heredoc (quote the first sentinel to prevent bash substitutions)
 grep proud <<END
@@ -46,6 +52,9 @@ set +x
 
 # Set early fail, not recommended http://mywiki.wooledge.org/BashFAQ/105
 set -e
+
+# Safer set of fail
+set -euo pipefail
 
 # Check if a folder is a mountpoint
 if mountpoint -q -- "${WIN}"; then

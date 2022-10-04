@@ -22,3 +22,13 @@ Resume a job in background                                        bg %1
 
 # Kill a loop
 Ctrl-z, kill -9 PID
+
+# Find the process blocking an umount
+fuser -c /mnt/
+
+c - the process is using the file as its current working directory
+m - the file is mapped with mmap
+o - the process is using it as an open file
+r - the file is the root directory of the process
+t - the process is accessing the file as a text file
+y - this file is the controlling terminal for the process

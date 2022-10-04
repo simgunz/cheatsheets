@@ -1,0 +1,12 @@
+# Display column names
+csvcut -n FILE
+
+# Grep
+csvgrep -c COLUMN -m MATCH
+csvgrep -c COLUMN -r REGEX
+
+# SQL query
+csvsql --query
+
+# Stack csv
+csvstack FILE1 FILE2 > OUTPUT

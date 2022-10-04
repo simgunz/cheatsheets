@@ -1,0 +1,2 @@
+# Example
+dig google.it | jc --dig  | jello '_[0].answer[0].name'

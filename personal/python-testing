@@ -39,3 +39,9 @@ Use the tmp_path fixture if using pytest
 def print_with_external_mock():
     with mock.patch("jrnlmd.ioutils.print_with_external", wraps=print) as print_mock:
         yield print_mock
+
+# Syrupy
+- Use syrupy to test csv dumps
+```
+df.to_csv(index=False) == snapshot
+```

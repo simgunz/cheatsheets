@@ -16,3 +16,7 @@
 - properties before methods
 - classmethod > staticmethod > method
 - top down: high level methods first
+
+# Naming functions with side effects
+sorted(a_list)
+expanded_partners_price_engines(a_dict) [as opposed to expanded_partners_price_engines_inplace(a_dict)]

@@ -1,0 +1,3 @@
+# Annotate factory methods with Self
+def create(method: str) -> Self:
+    ...
