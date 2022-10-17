@@ -7,6 +7,7 @@ Easy motion leader                               <localleader><localleader>
 Python sense                                     ac ic af if ad id
 Targets                                          https://github.com/wellle/targets.vim
 Targets                                          a, a: 2a)
+Encode urls                                      [u
 
 # Shortcuts
 Jump between last and current position           ``

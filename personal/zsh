@@ -1,3 +1,7 @@
+# rename multiple files
+autoload zmv && zmv '**/*.txt' '**/*.md'
+autoload zmv && zmv '(**/)(*).txt' '$1$2.md'
+
 # A plain old glob
 print -l *.txt
 print -l **/*.txt
