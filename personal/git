@@ -12,7 +12,7 @@ up  number of unpushed commits
 
 # Reset keeping index and working tree changes
 git reset --keep
-#
+
 # Reset only keeping working tree changes (if you have merge conflicts it removes the bad staged modications)
 git reset --merge
 
@@ -21,6 +21,10 @@ git conflicted
 
 # Force other branch to match HEAD
 git branch -f OTHER_BRANCH
+
+# Revert a git --amend
+git reset --soft @{1}
+git commit -C @{1}
 
 # Ignore modification to tracked files
 git ignore
@@ -60,11 +64,25 @@ git rebase --onto main feature-base feature
              /
 D---E---F---G---H---I (main)
 
-
                 A---B---C (feature-base)
                /
               /       X'--Y'--Z' (feature)
              /       /
+D---E---F---G---H---I (main)
+
+# Rebase --update-refs
+git rebase --update-refs main
+
+                        X---Y---Z (feature)
+                       /
+              A---B---C (feature-base)
+             /
+D---E---F---G---H---I (main)
+
+                                X---Y---Z (feature)
+                               /
+                      A---B---C (feature-base)
+                     /
 D---E---F---G---H---I (main)
 
 # Advanced history rewriting

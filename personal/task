@@ -1,5 +1,20 @@
+# Best practices
+https://taskwarrior.org/docs/best-practices/
+
 # Init a local project (custom)
 task-init-local-project PROJECTNAME
 
 # Switch to a context
 task use context
+
+# Start a task
+task ID start
+
+# Add next task to boost urgency
+task ID modify +next
+
+# Add dependencies
+task ID modify depends:OTHER_ID
+
+# UI
+taskwarrior-tui

@@ -1,12 +1,26 @@
+# Delimiter
+csvcut -d ';' ...
+
 # Display column names
 csvcut -n FILE
 
 # Grep
 csvgrep -c COLUMN -m MATCH
+csvgrep -c COLUMN -im MATCH_INVERSE
 csvgrep -c COLUMN -r REGEX
+
+# Stack csv
+csvstack FILE1 FILE2 > OUTPUT
+
+# Stack csv and grep (delimiter only in first command)
+csvstack -d ';' FILE_2022-09-* | csvgrep -c COLUMN -m MATCH
 
 # SQL query
 csvsql --query
 
-# Stack csv
-csvstack FILE1 FILE2 > OUTPUT
+# Sum numbers in a column
+csvcut -c orders FILE | tail +2 | paste -sd+ | bc
+
+# Sum numbers in a colum
+csvcut -c orders FILE | csvstat
+

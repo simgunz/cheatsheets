@@ -1,3 +1,4 @@
+# Escape
 Escape % in crontab (% is interpreted as newline by cron)
 
 # Run with cron environment

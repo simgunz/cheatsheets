@@ -43,3 +43,6 @@ Next conflict                         <leader>nc
 
 # Headless editore
 ex
+
+# Display line numbers
+:set number

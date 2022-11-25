@@ -1,3 +1,6 @@
+# Init a project
+pipenv --python 3.9 install meltano
+
 # Install a package
 pipenv install PACKAGE
 
