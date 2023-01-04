@@ -1,0 +1,19 @@
+# Drop to debug shell
+pytest --pdb
+
+# Check correctness of a bash script
+shellcheck SCRIPT
+
+# Zsh functions
+funced FUNC
+funcsave FUNC
+ls $ZFUNCDIR
+
+# Edit last shell command
+fc
+
+# Size of current dir
+du -sh
+
+# Do not save command in history
+<space>COMMAND

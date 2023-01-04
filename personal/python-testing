@@ -1,6 +1,9 @@
 # pytest
 Add __init__.py to the tests/ directory to be able importing modules from the parent folder
 
+# pytest drop to debug
+pytest --pdb
+
 # Mock
 - Better using MagicMock than patch, if you resort on patch it means your code is not testable
 - Mock the object is imported into not where the object is imported from
