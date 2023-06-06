@@ -1,3 +1,6 @@
+# Tests grey
+fd --no-ignore -t d pycache -x rm -r 
+
 # pytest
 Add __init__.py to the tests/ directory to be able importing modules from the parent folder
 

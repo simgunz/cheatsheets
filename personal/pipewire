@@ -1,2 +1,8 @@
 # List all pulseaudio sinks
-pactl list sinks
+pactl list short sinks
+
+# List all pulseaudio sources
+pactl list short sources
+
+# Unload a module
+pactl unload-module

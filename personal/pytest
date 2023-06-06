@@ -1,0 +1,2 @@
+# Do not run test marked with
+pytest -m 'not slow'

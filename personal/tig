@@ -2,32 +2,8 @@
 tags: [ vcs, git ]
 ---
 
-# Shortcuts
-Quit all views                  Q
-Open view fullscreen            O
+# Toggle word-diff
+tig --word-diff=plain
 
-# Main
-Copy commit hash                H
-
-# Status
-Next file                       F
-Amend commit                    A
-Push                            P
-Stage single line               1
-Rebase continue                 B
-Stage new file                  N
-Trash file                      T
-Stash (keep index)              S
-Graphical diff                  D
-
-# Toggles
-Show commit id                  X
-
-# Reflog
-tig --reflog
-
-# Other
-Screen redraw                   Ctrl-L
-
-# Debug
-TIG_TRACE=/tmp/tigtrace tig
+# Ref-view > All references
+j   scroll to next branch

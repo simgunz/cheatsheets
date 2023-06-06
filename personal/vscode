@@ -1,5 +1,6 @@
 # Useful commands
 Show call hierarchy                              Alt + Shift + h
+Show bottom panel                                Ctrl+J
 
 # Troubleshooting
 Start extension bisect
@@ -7,3 +8,5 @@ Start extension bisect
 # Vim
 Hoover mouse                                     gh
 Add cursor to matching work                      2gb
+
+

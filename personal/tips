@@ -1,3 +1,15 @@
+# TLDR
+Use tldr
+
+# VScode extension
+Use turbo console log to write debug log messages
+
+# Query json with python syntax
+echo a.json | jello _["foo"]
+
+# Refactor with comby
+comby --help
+
 # Drop to debug shell
 pytest --pdb
 
@@ -17,3 +29,9 @@ du -sh
 
 # Do not save command in history
 <space>COMMAND
+
+# Python chained evaluators
+if 0 < x < 10:
+
+# VSCode show panel
+CTRL-J

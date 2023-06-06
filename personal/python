@@ -33,3 +33,6 @@ https://coderzcolumn.com/tutorials/python/email-how-to-represent-an-email-messag
 
 # Use shell-like commands in python
 plumbum
+
+# Find unused functions
+vulture .
