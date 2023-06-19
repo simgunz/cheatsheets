@@ -8,6 +8,11 @@ Python sense                                     ac ic af if ad id
 Targets                                          https://github.com/wellle/targets.vim
 Targets                                          a, a: 2a)
 Encode urls                                      [u
+Sort all lines                                   1G!Gsort 
+Match whole words                                /word\>
+Easy motion                                      <leader><leader>w
+List jumps                                       :jumps
+
 
 # Paste last yank after deletion
 yy
