@@ -1,0 +1,8 @@
+# Print config
+yay -Pg
+
+# Save an option
+yay --option --save
+
+# Print stats
+yay -Ps

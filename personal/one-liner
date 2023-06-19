@@ -15,3 +15,6 @@ csvcut -s " " -K 13 access.log-20220127.fwdebtpwsgbot01 | sort | uniq > ips
 
 # Find files with regexp and zip them
 fd '2022-02-2[3-7]' -X zip -r 2022-02-23--2022-02-27_cr.zip
+
+# Export env variables from .env file
+export $(<.env)

@@ -9,12 +9,17 @@ Targets                                          https://github.com/wellle/targe
 Targets                                          a, a: 2a)
 Encode urls                                      [u
 
+# Paste last yank after deletion
+yy
+dd
+"0p
+
 # Shortcuts
 Jump between last and current position           ``
 Jump to next/previous jump position              Ctrl+O / Ctrl+I
 Jump to previous/next edit position              g; / g,
 
-Paste and put the cursore after                  gp
+Paste and put the cursor after                  gp
 
 Format code                                      ==
 
