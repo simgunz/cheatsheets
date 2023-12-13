@@ -1,9 +1,14 @@
 # Extract some files
+mkdir temp
+borgmatic extract --archive latest --path $(realpath rasoio) --destination temp
+
 mktmp
 borgmatic extract \
     --archive dragonfly-2022-01-22T10:01:30.825414 \
     --path media/dataHD/... \
-    --destination .
+    --destination . \
+    --progress \
+    --strip-components 2  # can also be 'all'
 
 # Mount an archive
 mktmp && mkdir mnt
